@@ -1,18 +1,18 @@
-
 #include<stdio.h>
 int main()
 {
-    int n,i=0,rem,k;
+    int n,d,t,x;
     scanf("%d",&n);
-    while(n!=0)
+    x=n;
+    t=0;
+    while(n>0)
     {
-        rem=n%10;
+        d=n%10;
         n=n/10;
-        k=rem;
-        if(k>i)
-    {
-        i=k;
+        if(t<d)
+        {
+            t=d;
+        }
     }
-    }
-    printf("%d",i);
+    printf("%d",t);
 }
