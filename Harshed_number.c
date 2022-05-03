@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,t,sum=0,r;
+    int n,sum=0,r;
     scanf("%d",&n);
-    t=n;
-    while(n!=0)
+    int t=n;
+    while(n)
     {
         r=n%10;
         sum=sum+r;
