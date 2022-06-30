@@ -1,19 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a[100],c=0;
+    int n,arr[100],i,e=0;
     scanf("%d",&n);
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
     for(i=0;i<n;i++)
     {
         if(i%2==0)
         {
-            c=c+a[i];
+            e=e+arr[i];
         }
-        
     }
-    printf("%d",c);
+    printf("%d",e);
 }
