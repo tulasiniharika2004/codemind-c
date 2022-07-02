@@ -1,31 +1,18 @@
 #include<stdio.h>
-int sum(int n)
-{
-    int d,s=0;
-    while(n)
-    {
-        d=n%10;
-        n=n/10;
-        s=s+d;
-    }
-    return s;
-}
 int main()
 {
-    int n,s;
+    int n,sum=0,r;
     scanf("%d",&n);
-    s=n;
-    while(1)
+    while(n>9)
     {
-        if(s<10)
+        sum=0;
+        while(n>0)
         {
-            printf("%d",s);
-            break;
+            r=n%10;
+            sum+=r;
+            n=n/10;
         }
-        else
-        {
-            s=sum(n);
-        }
-        n=s;
+        n=sum;
     }
+    printf("%d",sum);
 }
