@@ -1,41 +1,37 @@
 #include<stdio.h>
 int main()
 {
-    int n,t,d,i,c=0,s=0,k=0;
+    int n,i,c=0,c1=0,r,rev=0,j;
     scanf("%d",&n);
-    t=n;
-    for(i=1;i<n;i++)
+    for(i=2;i<=n;i++)
     {
         if(n%i==0)
         {
             c++;
         }
     }
-    if(c==1)
+    while(n)
     {
-        while(n)
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+    for(j=2;j<=rev;j++)
+    {
+        if(rev%j==0)
         {
-            d=n%10;
-            n=n/10;
-            s=s*10+d;
+            c1++;
         }
     }
-    for(i=1;i<s;i++)
-    {
-        if(s%i==0)
-        {
-            k++;
-        }
-    }
-    if(k==1 && c==1)
+    if(c==1 && c1==1)
     {
         printf("circular prime");
     }
-    else if(k!=1 && c==1)
+    else if(c==1 and c1!=1)
     {
         printf("prime but not a circular prime");
     }
-    else if (c!=1)
+    else if(c!=1)
     {
         printf("not prime");
     }
