@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,x=0,y=1,c;
+    int n,a,b,sum,i;
     scanf("%d",&n);
-    printf("0 ");
-    i=0;
-    while(i<n-1)
+    a=0;
+    b=1;
+    printf("%d %d ",a,b);
+    for(i=2;i<n;i++)
     {
-        c=x;
-        x=x+y;
-        y=c;
-        printf("%d ",x);
-        i++;
+        sum=a+b;
+        printf("%d ",sum);
+        a=b;
+        b=sum;
     }
 }
