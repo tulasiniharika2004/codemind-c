@@ -1,34 +1,28 @@
 #include<stdio.h>
-int p(int num)
-{
-    int i,c=0;
-    for(i=1;i<=num;i++)
-    {
-        if(num%i==0)
-        {
-            c++;
-        }
-    }
-    if(c==2)
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
 int main()
 {
-    int n1,n2,n3,vk,s;
+    int n1,n2,s,i,j,count=0;
     scanf("%d%d",&n1,&n2);
     s=n1+n2;
-    for(vk=s+1;;vk++)
+    
+    for(i=1;i<=1000;i++)
     {
-        if(p(vk))
-        {
-            break;
-        }
+       s=s+1;
+       for(j=1;j<=s;j++)    //
+       {
+           if(s%j==0)        //11%==0
+           {
+               count++;       //1
+           }
+       }
+       if(count==2)
+       {
+         break;
+       }
+       else
+       {
+           count=0;
+       }
     }
-    printf("%d",vk-s);
+    printf("%d",i);
 }
