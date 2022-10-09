@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,arr[100],x=0,a,b;
+    int n;
     scanf("%d",&n);
+    int arr[100],a,b,i,sum=0,count=0;
     for(i=0;i<n;i++)
     {
         scanf("%d",&arr[i]);
@@ -10,15 +11,15 @@ int main()
     scanf("%d%d",&a,&b);
     for(i=0;i<n;i++)
     {
-        if(a<=arr[i] && arr[i]<=b || b<=arr[i] && arr[i]<=a)
+        if(arr[i]>=a && arr[i]<=b)
         {
             printf("%d ",arr[i]);
-            x++;
+            count++;
         }
     }
-    if(x==0)
+    if(count==0)
     {
         printf("-1");
     }
-       
+    
 }
