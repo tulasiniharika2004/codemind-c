@@ -3,7 +3,7 @@ int main()
 {
     int n,s=0,i;
     scanf("%d",&n);
-    int a[100],c=0;
+    int a[100];
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
@@ -12,10 +12,9 @@ int main()
     {
         if(a[i]<a[i+1])
         {
+            
             s=s+1;
         }
-        
-        
     }
     if(s==n-1)
     {
